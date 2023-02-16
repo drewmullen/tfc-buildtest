@@ -24,5 +24,4 @@ module "vpc" {
       netmask                 = 24
       connect_to_public_natgw = true
     }
-  }
 }
