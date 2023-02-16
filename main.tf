@@ -8,7 +8,7 @@ module "vpc" {
   cidr_block = "10.0.0.0/20"
   az_count   = 2
 
-  # subnets = {
+  subnets = {
   #   public = {
   #     name_prefix               = "my-public" # omit to prefix with "public"
   #     netmask                   = 24
@@ -24,4 +24,5 @@ module "vpc" {
       netmask                 = 24
       connect_to_public_natgw = true
     }
+  }
 }
