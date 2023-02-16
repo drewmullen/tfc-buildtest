@@ -2,7 +2,7 @@ data "aws_availability_zones" "current" {}
 
 module "vpc" {
   source  = "aws-ia/vpc/aws"
-  version = ">= 3.0.2"
+  version = ">= 4.0.0"
 
   name       = "tfcTest"
   cidr_block = "10.0.0.0/20"
@@ -22,7 +22,7 @@ module "vpc" {
       # omitting name_prefix defaults value to "private"
       # name_prefix  = "private"
       netmask                 = 24
-      connect_to_public_natgw = true
+      # connect_to_public_natgw = true
     }
   }
 }
